@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<h1><title>Peso Ideal</title></h1>
+		<meta charset="utf-8" />
+		<script type="text/javascript">
+			vCor=['red','blue','white']
+			i=0
+			function calcularPI(){
+				let formulario = document.getElementById("formulario");
+                let sexo = +formulario.genero.value;
+                let pulso = +formulario.pulcm.value;
+                let altura = +formulario.altcm.value;
+                let pi = altura/pulso;
+				formulario.pi.value = pi.toFixed(2);4
+                		if (  genero == 'male' )   {
+                    			alert("Homem")
+                		}
+                		else{
+                    			alert("Mulher")
+
+                		}                
+            		}	
+			
+		</script>
+	</head>
+	<body>
+		<form id="formulario">
+			<fieldset>	<legend>  Peso Ideal </legend>
+					Sexo: <input type="radio" id="male" name="genero" value="male">	<label for="male">Male</label><input type="radio" id="female" name="genero" value="female"><label for="female">Female</label><br><br>
+					Circunferência do pulso: <input  id="pulso" type="text" name="pulcm" size="6" /> cm <br/><br/>
+					Altura: <input  id="altcm" type="text" name="altcm" size="3"/> cm <br/><br/>
+					Compleição: <input  id="pi" type="text" name="pi" readonly/><br/>
+				<br/><input type="button" value="Calcular" onclick="calcularPI()" style="color:black"><br/>
+			</fieldset>
+			<br/>
+		</form>
+
+		<img id='img' src= 'img/AtividadeForm.jpg'/>
+	</body>
+	
+</html>
